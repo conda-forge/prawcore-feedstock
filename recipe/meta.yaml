@@ -1,6 +1,6 @@
 {% set name = "prawcore" %}
-{% set version = "0.13.0" %}
-{% set sha256 = "3fb71235d61307ed166b41e47fcd3f1167f9b1bb3630c5ebe1d83c00fd611d5a" %}
+{% set version = "0.14.0" %}
+{% set sha256 = "cc5c32ee8c1d1de212ade0ea319a21d3448cb151cb1ccb7335ba76ca96cf8f37" %}
 
 package:
   name: {{ name|lower }}
