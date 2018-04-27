@@ -14,12 +14,15 @@ Summary: Low-level communication layer for PRAW 4+
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/prawcore-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/prawcore-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/prawcore-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/prawcore-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/prawcore/badges/version.svg)](https://anaconda.org/conda-forge/prawcore)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/prawcore/badges/downloads.svg)](https://anaconda.org/conda-forge/prawcore)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-prawcore-green.svg)](https://anaconda.org/conda-forge/prawcore) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/prawcore.svg)](https://anaconda.org/conda-forge/prawcore) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/prawcore.svg)](https://anaconda.org/conda-forge/prawcore) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/prawcore.svg)](https://anaconda.org/conda-forge/prawcore) |
 
 Installing prawcore
 ===================
