@@ -1,6 +1,6 @@
 {% set name = "prawcore" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "ab5558efb438aa73fc66c4178bfc809194dea3ce2addf4dec873de7e2fd2824e" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "6bddf1d4cfbdd0ae04b0dc4f241893477ea03e310d9ae4d81910ac374dcbb37f" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -33,7 +33,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: "Low-level communication layer for PRAW 4+"
+  summary: Low-level communication layer for PRAW 4+
   dev_url: https://github.com/praw-dev/prawcore
 
 extra:
