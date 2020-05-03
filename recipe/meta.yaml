@@ -25,6 +25,10 @@ requirements:
     - requests >=2.6.0,<3.0
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - prawcore
 
