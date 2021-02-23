@@ -5,11 +5,11 @@ Home: https://github.com/praw-dev/prawcore
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prawcore-feedstock/blob/master/LICENSE.txt)
 
 Summary: Low-level communication layer for PRAW 4+
 
-
+Development: https://github.com/praw-dev/prawcore
 
 Current build status
 ====================
