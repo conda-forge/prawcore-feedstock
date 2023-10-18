@@ -21,6 +21,7 @@ requirements:
     - python >=3.8
     - flit-core >=3.4,<4
     - pip
+    - requests >=2.6.0,<3.0  # Because init is imported to get package version
   run:
     - python >=3.8
     - requests >=2.6.0,<3.0
