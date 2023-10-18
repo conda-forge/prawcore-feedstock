@@ -1,4 +1,5 @@
 {% set name = "prawcore" %}
+{% set import = "prawcore" %}
 {% set version = "2.4.0" %}
 {% set sha256 = "b7b2b5a1d04406e086ab4e79988dc794df16059862f329f4c6a43ed09986c335" %}
 
@@ -7,8 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -32,7 +32,7 @@ test:
   commands:
     - pip check
   imports:
-    - prawcore
+    - {{ import }}
 
 about:
   home: https://github.com/praw-dev/prawcore
@@ -40,7 +40,9 @@ about:
   license_family: BSD
   license_file: LICENSE.txt
   summary: Low-level communication layer for PRAW 4+
+  description: Prawcore is a low-level communication layer used by PRAW 4+.
   dev_url: https://github.com/praw-dev/prawcore
+  doc_url: https://github.com/praw-dev/prawcore/blob/main/README.rst
 
 extra:
   recipe-maintainers:
