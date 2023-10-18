@@ -1,14 +1,14 @@
 {% set name = "prawcore" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "daf1ccd4b7a80dc4e6567d48336d782e94a9a6dad83770fc2edf76dc9a84f56d" %}
+{% set import = "prawcore" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "b7b2b5a1d04406e086ab4e79988dc794df16059862f329f4c6a43ed09986c335" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -17,11 +17,13 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python >=3.6
+  host:
+    - python >=3.8
+    - flit-core >=3.4,<4
     - pip
+    - requests >=2.6.0,<3.0  # Because init is imported to get package version
   run:
-    - python >=3.6
+    - python >=3.8
     - requests >=2.6.0,<3.0
 
 test:
@@ -30,7 +32,7 @@ test:
   commands:
     - pip check
   imports:
-    - prawcore
+    - {{ import }}
 
 about:
   home: https://github.com/praw-dev/prawcore
@@ -38,7 +40,9 @@ about:
   license_family: BSD
   license_file: LICENSE.txt
   summary: Low-level communication layer for PRAW 4+
+  description: Prawcore is a low-level communication layer used by PRAW 4+.
   dev_url: https://github.com/praw-dev/prawcore
+  doc_url: https://github.com/praw-dev/prawcore/blob/main/README.rst
 
 extra:
   recipe-maintainers:
