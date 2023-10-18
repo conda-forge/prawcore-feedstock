@@ -11,6 +11,10 @@ Summary: Low-level communication layer for PRAW 4+
 
 Development: https://github.com/praw-dev/prawcore
 
+Documentation: https://github.com/praw-dev/prawcore/blob/main/README.rst
+
+Prawcore is a low-level communication layer used by PRAW 4+.
+
 Current build status
 ====================
 
