@@ -1,14 +1,14 @@
 {% set name = "prawcore" %}
 {% set import = "prawcore" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "b7b2b5a1d04406e086ab4e79988dc794df16059862f329f4c6a43ed09986c335" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "55d95b748de1aa9dd477525864c2256fc879151fa1bd342801a64586ae1b227a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
