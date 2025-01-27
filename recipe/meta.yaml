@@ -1,7 +1,7 @@
 {% set name = "prawcore" %}
 {% set import = "prawcore" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "68b7b3fffa8cde623c841e204cb401a5e4cf2c1ef05d63ee7d3c5c37631dbe59" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "55d95b748de1aa9dd477525864c2256fc879151fa1bd342801a64586ae1b227a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
