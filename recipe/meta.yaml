@@ -14,14 +14,13 @@ source:
 build:
   noarch: python
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python {{ python_min }}
     - flit-core >=3.4,<4
     - pip
-    - requests >=2.6.0,<3.0  # Because init is imported to get package version
   run:
     - python >={{ python_min }}
     - requests >=2.6.0,<3.0
