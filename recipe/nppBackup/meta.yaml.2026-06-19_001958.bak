@@ -1,7 +1,12 @@
 {% set name = "prawcore" %}
 {% set import = "prawcore" %}
+<<<<<<< HEAD
+{% set version = "3.2.1" %}
+{% set sha256 = "50ea70f6287fdd86d3d5a4fff801bc0bc0763ad58f68e5520c270af71d388655" %}
+=======
 {% set version = "4.0.0" %}
 {% set sha256 = "c7e4d6e1b71e2b9c88680aee467e3e07d22df4c91bb01488ce2a3ab43d76b076" %}
+>>>>>>> 4fed541 (updated v4.0.0)
 
 package:
   name: {{ name|lower }}
