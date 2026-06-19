@@ -19,7 +19,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+<<<<<<< HEAD
+    - flit-core >=3.12.0,<4
+=======
     - hatchling
+>>>>>>> 31c139d (Switch from Flit-Core to Hatchling for build backend)
     - pip
   run:
     - python >={{ python_min }}
