@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - flit-core >=3.4,<4
     - pip
   run:
     - python >={{ python_min }}
-    - requests >=2.34.2,<3.0
+    - requests >=2.6.0,<3.0
 
 test:
   requires:
@@ -42,7 +42,7 @@ about:
   summary: Low-level communication layer for PRAW 4+
   description: Prawcore is a low-level communication layer used by PRAW 4+.
   dev_url: https://github.com/praw-dev/prawcore
-  doc_url: https://prawcore.readthedocs.io/
+  doc_url: https://github.com/praw-dev/prawcore/blob/main/README.rst
 
 extra:
   recipe-maintainers:
