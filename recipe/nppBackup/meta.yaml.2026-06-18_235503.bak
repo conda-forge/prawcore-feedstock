@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - requests >=2.33.0,<3.0
+    - requests >=2.6.0,<3.0
 
 test:
   requires:
