@@ -1,7 +1,12 @@
 {% set name = "prawcore" %}
 {% set import = "prawcore" %}
-{% set version = "3.1.0" %}
-{% set sha256 = "8a1bb969c7d69d0f11f68bdfd3e61e62bf6a3691904e97857137b1c31081a685" %}
+<<<<<<< HEAD
+{% set version = "3.0.0" %}
+{% set sha256 = "68b7b3fffa8cde623c841e204cb401a5e4cf2c1ef05d63ee7d3c5c37631dbe59" %}
+=======
+{% set version = "3.0.1" %}
+{% set sha256 = "55d95b748de1aa9dd477525864c2256fc879151fa1bd342801a64586ae1b227a" %}
+>>>>>>> 70966f8 (updated v3.0.1)
 
 package:
   name: {{ name|lower }}
@@ -13,7 +18,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,7 +28,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - requests >=2.33.0,<3.0
+    - requests >=2.6.0,<3.0
 
 test:
   requires:

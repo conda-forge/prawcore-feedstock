@@ -1,7 +1,7 @@
 {% set name = "prawcore" %}
 {% set import = "prawcore" %}
-{% set version = "3.1.0" %}
-{% set sha256 = "8a1bb969c7d69d0f11f68bdfd3e61e62bf6a3691904e97857137b1c31081a685" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "68b7b3fffa8cde623c841e204cb401a5e4cf2c1ef05d63ee7d3c5c37631dbe59" %}
 
 package:
   name: {{ name|lower }}
@@ -13,17 +13,18 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - python {{ python_min }}
     - flit-core >=3.4,<4
     - pip
+    - requests >=2.6.0,<3.0  # Because init is imported to get package version
   run:
     - python >={{ python_min }}
-    - requests >=2.33.0,<3.0
+    - requests >=2.6.0,<3.0
 
 test:
   requires:
